@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Oxy Club | BDWorld Trusted Platform বাংলাদেশ</title>
+<title> BDWorld |Oxy Club Trusted Platform বাংলাদেশ</title>
 
 <meta name="description" content="Oxy Club BDWorld - বাংলাদেশে trusted online platform। দ্রুত deposit, instant withdraw এবং 24/7 admin support। এখনই join করুন।">
 <meta name="keywords" content="Oxy Club, BDWorld Bangladesh, bdworld login, online betting bd, admin online bd, 01826444505, Oxy11">
@@ -36,44 +36,44 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
     background: var(--blue);
-    padding: 12px 15px;
+    padding: 12px 20px;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    height: 35px;
+    height: 40px;
 }
 
-/* Header buttons */
-.header-buttons {
-    position: absolute;
-    right: 20px;
-}
-
+/* Header Buttons */
 .header-buttons a {
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 18px;
+    padding: 10px 20px;
     border-radius: 25px;
-    margin-left: 8px;
+    margin-left: 10px;
     color: white;
-    transition: transform 0.2s;
+    transition: all 0.3s;
+}
+
+.header-buttons a.login {
+    background-color: var(--green);
+    box-shadow: 0 4px 8px rgba(40,167,69,0.3);
+}
+
+.header-buttons a.signup {
+    background-color: var(--orange);
+    box-shadow: 0 4px 8px rgba(255,152,0,0.3);
 }
 
 .header-buttons a:hover {
-    transform: scale(1.05);
-}
-
-.header-buttons .login {
-    background-color: var(--green);
-}
-
-.header-buttons .signup {
-    background-color: var(--orange);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 /* Info Section below header */
@@ -116,18 +116,6 @@ header {
     50% { opacity: 0.3; }
 }
 
-/* Buttons in Info Section */
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff9800, #e65100);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
 /* Screenshot Section */
 .image-box {
     text-align: center;
@@ -154,16 +142,18 @@ footer {
 
 /* Responsive */
 @media (max-width: 480px) {
-    .info-section h1 { font-size: 24px; }
-    .info-section p { font-size: 14px; }
     .header-buttons {
-        position: static;
-        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
     }
     .header-buttons a {
-        margin-left: 5px;
-        padding: 6px 12px;
+        margin: 5px 0 0 0;
+        width: 100%;
+        text-align: center;
     }
+    .info-section h1 { font-size: 24px; }
+    .info-section p { font-size: 14px; }
 }
 </style>
 </head>
