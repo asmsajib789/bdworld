@@ -17,6 +17,7 @@
 :root {
     --blue: #002347;
     --orange: #ff9800;
+    --green: #28a745;
     --white: #fff;
 }
 
@@ -34,7 +35,10 @@ body {
 
 /* Header */
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background: var(--blue);
     padding: 12px 15px;
     color: white;
@@ -42,6 +46,34 @@ header {
 
 .logo img {
     height: 35px;
+}
+
+/* Header buttons */
+.header-buttons {
+    position: absolute;
+    right: 20px;
+}
+
+.header-buttons a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 25px;
+    margin-left: 8px;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.header-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.header-buttons .login {
+    background-color: var(--green);
+}
+
+.header-buttons .signup {
+    background-color: var(--orange);
 }
 
 /* Info Section below header */
@@ -84,7 +116,7 @@ header {
     50% { opacity: 0.3; }
 }
 
-/* Button */
+/* Buttons in Info Section */
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, #ff9800, #e65100);
@@ -124,6 +156,14 @@ footer {
 @media (max-width: 480px) {
     .info-section h1 { font-size: 24px; }
     .info-section p { font-size: 14px; }
+    .header-buttons {
+        position: static;
+        margin-top: 8px;
+    }
+    .header-buttons a {
+        margin-left: 5px;
+        padding: 6px 12px;
+    }
 }
 </style>
 </head>
@@ -134,6 +174,10 @@ footer {
     <div class="logo">
         <img src="bd2.png" alt="BDWorld Logo">
     </div>
+    <div class="header-buttons">
+        <a href="https://bdworld.live/login" class="login">Login</a>
+        <a href="https://bdworld.live/signup" class="signup">Sign Up</a>
+    </div>
 </header>
 
 <!-- Info Section below header -->
@@ -143,7 +187,6 @@ footer {
     <p>Sponsor: Oxy11</p>
     <p class="contact"><i class="fab fa-whatsapp"></i> 01826444505 (IMO / WhatsApp)</p>
     <p>BdWorld Official Partner</p>
-    <a href="https://bdworld.live" class="btn">Login Bdworld</a>
 </section>
 
 <!-- Screenshot Section -->
