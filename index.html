@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> BDWorld |Oxy Club Trusted Platform বাংলাদেশ</title>
+<title>Oxy Club | BDWorld Trusted Platform বাংলাদেশ</title>
 
 <meta name="description" content="Oxy Club BDWorld - বাংলাদেশে trusted online platform। দ্রুত deposit, instant withdraw এবং 24/7 admin support। এখনই join করুন।">
 <meta name="keywords" content="Oxy Club, BDWorld Bangladesh, bdworld login, online betting bd, admin online bd, 01826444505, Oxy11">
@@ -50,31 +50,35 @@ header {
     height: 40px;
 }
 
-/* Header Buttons */
+/* Header Buttons Compact & Side by Side */
+.header-buttons {
+    display: flex;
+    gap: 8px; /* buttons পাশে পাশে gap */
+}
+
 .header-buttons a {
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 25px;
-    margin-left: 10px;
+    padding: 6px 14px;   /* compact padding */
+    border-radius: 20px;
+    font-size: 14px;
     color: white;
     transition: all 0.3s;
 }
 
 .header-buttons a.login {
     background-color: var(--green);
-    box-shadow: 0 4px 8px rgba(40,167,69,0.3);
+    box-shadow: 0 3px 6px rgba(40,167,69,0.3);
 }
 
 .header-buttons a.signup {
     background-color: var(--orange);
-    box-shadow: 0 4px 8px rgba(255,152,0,0.3);
+    box-shadow: 0 3px 6px rgba(255,152,0,0.3);
 }
 
 .header-buttons a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    font-size: 14px; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 /* Info Section below header */
@@ -143,15 +147,14 @@ footer {
 
 /* Responsive */
 @media (max-width: 480px) {
-    .header-buttons {
-        display: flex;
+    header {
         flex-direction: column;
-        margin-top: 10px;
+        gap: 10px;
     }
-    .header-buttons a {
-        margin: 5px 0 0 0;
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
-        text-align: center;
     }
     .info-section h1 { font-size: 24px; }
     .info-section p { font-size: 14px; }
