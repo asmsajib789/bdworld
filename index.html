@@ -39,46 +39,47 @@ header {
     justify-content: space-between;
     align-items: center;
     background: var(--blue);
-    padding: 12px 20px;
+    padding: 10px 20px;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Logo left */
 .logo img {
     height: 40px;
 }
 
-/* Header Buttons Compact & Side by Side */
+/* Header Buttons right, compact */
 .header-buttons {
     display: flex;
-    gap: 8px; /* buttons পাশে পাশে gap */
+    gap: 6px; /* buttons পাশে পাশে */
 }
 
 .header-buttons a {
     text-decoration: none;
     font-weight: 600;
-    padding: 6px 14px;   /* compact padding */
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 5px 12px;   /* compact */
+    border-radius: 18px;
+    font-size: 13px;     /* ছোট font */
     color: white;
     transition: all 0.3s;
 }
 
 .header-buttons a.login {
     background-color: var(--green);
-    box-shadow: 0 3px 6px rgba(40,167,69,0.3);
+    box-shadow: 0 2px 5px rgba(40,167,69,0.3);
 }
 
 .header-buttons a.signup {
     background-color: var(--orange);
-    box-shadow: 0 3px 6px rgba(255,152,0,0.3);
+    box-shadow: 0 2px 5px rgba(255,152,0,0.3);
 }
 
 .header-buttons a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Info Section below header */
@@ -149,12 +150,15 @@ footer {
 @media (max-width: 480px) {
     header {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
     .header-buttons {
-        flex-direction: row;
         justify-content: center;
         width: 100%;
+    }
+    .header-buttons a {
+        margin-left: 0;
+        padding: 5px 10px;
     }
     .info-section h1 { font-size: 24px; }
     .info-section p { font-size: 14px; }
