@@ -109,6 +109,29 @@
             border-bottom: 1px solid #ddd;
         }
 
+        .admin-btn {
+    display: inline-block;
+    background: #00c853; /* green */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 6px rgba(0,200,83,0.3);
+    transition: 0.3s;
+}
+
+.admin-btn i {
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.admin-btn:hover {
+    background: #00a844;
+    transform: translateY(-1px);
+}
         .admin-status {
             color: #28a745;
             font-weight: 600;
@@ -209,7 +232,9 @@
 
     <section class="info-section">
         <div class="admin-status">
-            <span class="dot"></span> Admin Online
+            <a href="#" class="admin-btn">
+    <i class="fas fa-circle"></i> Admin Online
+            </a>
         </div>
         <h1>Oxy Club</h1>
         <p>Sponsor: <strong>Oxy11</strong></p>
