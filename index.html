@@ -10,7 +10,7 @@
     <meta name="keywords" content="Oxy Club, BDWorld Site, bdworld.site login, Oxy11, BDWorld Bangladesh, Online Betting BD, Trusted Admin BDWorld, BdWorld Admin, Maxbet Club, BdWorld Club, BdWorld, Bitcoin Club , Game96, 01826444505">
     <meta name="author" content="Oxy Club">
     <meta name="robots" content="index, follow">
-       <meta name="google-site-verification" content="ZwfnVwBJOJZjpGp0VM8IGnTFm7uYPwsTLGItYsgDyl0" />
+    <meta name="google-site-verification" content="ZwfnVwBJOJZjpGp0VM8IGnTFm7uYPwsTLGItYsgDyl0" />
     
     <link rel="canonical" href="https://bdworld.site/" />
 
@@ -49,7 +49,6 @@
             --white: #fff;
         }
 
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -63,7 +62,6 @@
             line-height: 1.6;
         }
 
-        /* Header Style (As per Image) */
         header {
             display: flex;
             justify-content: space-between;
@@ -99,9 +97,7 @@
 
         .header-buttons a.login { background-color: var(--green); }
         .header-buttons a.signup { background-color: var(--orange); }
-        .header-buttons a:hover { opacity: 0.9; transform: translateY(-1px); }
 
-        /* Info Section */
         .info-section {
             text-align: center;
             background: white;
@@ -109,54 +105,59 @@
             border-bottom: 1px solid #ddd;
         }
 
-        .admin-btn {
-    display: inline-block;
-    background: #00c853; /* green */
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-bottom: 3px;
-    margin-top: 2px;
-    box-shadow: 0 3px 6px rgba(0,200,83,0.3);
-    transition: 0.3s;
-}
+        /* --- New Profile Admin Button CSS --- */
+        .admin-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
 
-.admin-btn i {
-    margin-right: 5px;
-    font-size: 10px;
-}
-
-.admin-btn:hover {
-    background: #00a844;
-    transform: translateY(-1px);
-}
-        .admin-status {
-            color: #28a745;
-            font-weight: 600;
-            margin-bottom: 6px;
+        .admin-profile-btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 15px;
+            background: #00c853; 
+            color: white;
+            padding: 5px 20px 5px 6px; 
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,200,83,0.3);
+            transition: 0.3s;
+            position: relative;
         }
 
-        .dot {
-            height: 12px;
-            width: 12px;
-            background-color: #28a745;
+        .admin-profile-btn img {
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            display: inline-block;
-            animation: blink 1.2s infinite;
+            border: 2px solid white;
+            margin-right: 12px;
+            object-fit: cover;
         }
 
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
+        /* Blinking Dot on Image Corner */
+        .status-dot {
+            height: 14px;
+            width: 14px;
+            background-color: #28ff5d;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 34px;
+            top: 4px;
+            animation: pulse-dot 1.2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .admin-profile-btn:hover {
+            transform: translateY(-2px);
+            background: #00a844;
         }
 
         .info-section h1 {
@@ -170,7 +171,6 @@
             font-size: 17px;
             margin: 4px 0;
             font-weight: 500;
-            
         }
 
         .whatsapp-link {
@@ -182,7 +182,6 @@
 
         .whatsapp-link i { color: #25D366; margin-right: 5px; }
 
-        /* Screenshot/Slider Section */
         .image-box {
             text-align: center;
             margin: 30px auto;
@@ -198,7 +197,6 @@
             border: 1px solid #ddd;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             font-size: 14px;
@@ -208,7 +206,6 @@
             margin-top: 20px;
         }
 
-        /* Responsive Mobile Fix */
         @media (max-width: 480px) {
             header { padding: 10px 15px; }
             .logo img { height: 35px; }
@@ -230,14 +227,16 @@
             <a href="https://bdworld.live/signup" class="signup">Signup</a>
         </div>
     </header>
-    
 
     <section class="info-section">
-        <div class="admin-status">
-            <a href="#" class="admin-btn">
-    <i class="fas fa-circle"></i> Operator Online 
+        <div class="admin-container">
+            <a href="https://wa.me/8801826444505" class="admin-profile-btn">
+                <img src="oxy.png" alt="Admin Profile">
+                <span class="status-dot"></span>
+                Operator Online 
             </a>
         </div>
+
         <h1>Oxy Club</h1>
         <p>Sponsor: <strong>Oxy11</strong></p>
         <p>
@@ -249,20 +248,22 @@
     </section>
 
     <section class="image-box">
-        <img src="Slider.jpg" alt="Oxy Club BDWorld Bangladesh Slider Image">
+        <img src="Slider.jpg" alt="Oxy Club Slider Image">
     </section>
-   <div style="text-align:center; padding:20px; background:#fff; border-top:2px solid #ddd; margin-top: 20px;">
-    <p style="font-size:16px; color:#333; margin-bottom: 10px; font-weight: 500;">
-        আমাদের পার্টনার সাইট:
-    </p>
-    <a href="https://oxyclub.site" target="_blank" 
-       style="background: #FD7E14; color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
-       Visit OxyClub.site
-    </a>
-   </div>
-        <section class="image-box">
-        <img src="thmb.png" alt="Oxy Club BDWorld Bangladesh Slider Image">
-        </section>
+
+    <div style="text-align:center; padding:20px; background:#fff; border-top:2px solid #ddd; margin-top: 20px;">
+        <p style="font-size:16px; color:#333; margin-bottom: 10px; font-weight: 500;">
+            আমাদের পার্টনার সাইট:
+        </p>
+        <a href="https://oxyclub.site" target="_blank" 
+           style="background: #FD7E14; color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+           Visit OxyClub.site
+        </a>
+    </div>
+
+    <section class="image-box">
+        <img src="thmb.png" alt="Oxy Club Promo Image">
+    </section>
     
     <footer>
         © 2026 Oxy Club Bangladesh <br>
